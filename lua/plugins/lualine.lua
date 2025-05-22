@@ -9,18 +9,33 @@ return {
 
 -- Color table for highlights
 -- stylua: ignore
+-- local colors = {
+--   bg       = '#202328',
+--   fg       = '#bbc2cf',
+--   yellow   = '#ECBE7B',
+--   cyan     = '#008080',
+--   darkblue = '#081633',
+--   green    = '#98be65',
+--   orange   = '#FF8800',
+--   violet   = '#a9a1e1',
+--   magenta  = '#c678dd',
+--   blue     = '#51afef',
+--   red      = '#ec5f67',
+-- }
+
+
 local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
+  bg       = '#1e1e2e',  -- Mocha background
+  fg       = '#cdd6f4',  -- Mocha foreground
+  yellow   = '#f9e2af',  -- Mocha yellow
+  cyan     = '#94e2d5',  -- Mocha cyan
+  darkblue = '#1e1e2e',  -- Mocha darkblue (same as bg)
+  green    = '#a6e3a1',  -- Mocha green
+  orange   = '#fab387',  -- Mocha orange
+  violet   = '#b4befe',  -- Mocha violet
+  magenta  = '#f5c2e7',  -- Mocha magenta
+  blue     = '#89b4fa',  -- Mocha blue
+  red      = '#f38ba8',  -- Mocha red
 }
 
     local conditions = {

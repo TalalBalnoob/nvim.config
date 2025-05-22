@@ -6,7 +6,7 @@ return {
     require('bufferline').setup {
       options = {
         mode = 'buffers',
-        style_preset = require('bufferline').style_preset.default,
+        style_preset = require('bufferline').style_preset.minimal,
         themable = true,
         numbers = 'none',
         close_command = 'bdelete! %d',

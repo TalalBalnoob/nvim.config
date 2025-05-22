@@ -4,11 +4,11 @@ return { -- Autoformat
   cmd = { 'ConformInfo' },
   keys = {
     {
-      '<leader>f',
+      '<leader>cf',
       function()
         require('conform').format { async = true, lsp_format = 'fallback' }
       end,
-      mode = '',
+      mode = 'n',
       desc = '[F]ormat buffer',
     },
   },
@@ -37,6 +37,7 @@ return { -- Autoformat
       javascript = { 'prettierd', 'prettier', stop_after_first = true },
       typescript = { 'prettierd', 'prettier', stop_after_first = true },
       php = { 'php-cs-fixer' },
+      java = { 'google-java-format' },
     },
   },
 }

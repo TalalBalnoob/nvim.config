@@ -31,7 +31,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
-vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+-- vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Page down and center' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Page up and center' })
@@ -57,13 +57,15 @@ vim.keymap.set('n', '<leader>fs', require('telescope.builtin').lsp_document_symb
 vim.keymap.set('n', '<leader>fS', require('telescope.builtin').lsp_dynamic_workspace_symbols, { desc = 'Find Workspace symbols' })
 vim.keymap.set('n', '<leader>fk', require('telescope.builtin').keymaps, { desc = 'Find Keymaps' })
 vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, { desc = 'Find Files' })
+vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').find_files, { desc = 'Find Files' })
 vim.keymap.set('n', '<leader>ft', require('telescope.builtin').builtin, { desc = 'Find Select Telescope' })
 vim.keymap.set('n', '<leader>fw', require('telescope.builtin').grep_string, { desc = 'Find current Word' })
 vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, { desc = 'Find by Grep' })
 vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, { desc = 'Find Diagnostics' })
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, { desc = ' Find existing buffers' })
-vim.keymap.set('n', '<leader>f.', require('telescope.builtin').oldfiles, { desc = 'Find Recent Files ("." for repeat)' })
-vim.keymap.set('n', '<leader><leader>', require('telescope.builtin').find_files, { desc = 'Find Files' })
+vim.keymap.set('n', '<leader>fr', require('telescope.builtin').oldfiles, { desc = 'Find Recent Files ("." for repeat)' })
+vim.keymap.set('n', '<leader>.', require('telescope.builtin').resume, { desc = 'Browser' })
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Browser' })
 
 -- Slightly advanced example of overriding default behavior and theme
 vim.keymap.set('n', '<leader>/', function()
@@ -87,3 +89,5 @@ end, { desc = '[S]earch [/] in Open Files' })
 vim.keymap.set('n', '<leader>fn', function()
   require('telescope.builtin').find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files' })
+
+vim.keymap.set('n', '<leader>gg', '<CMD>LazyGit<CR>', { desc = 'LazyGit' })
